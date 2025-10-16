@@ -1,0 +1,254 @@
+[
+  {
+    "id": "G001",
+    "ten": "Nike Air Zoom Pegasus 40",
+    "hang": "Nike",
+    "gia_tien": 2899000,
+    "anh": "assets/giay_demo/pegasus40.jpg",
+    "mo_ta": "Đệm êm, chạy bộ hằng ngày",
+    "ton_kho": 15
+  },
+  {
+    "id": "G002",
+    "ten": "Nike Air Force 1 '07",
+    "hang": "Nike",
+    "gia_tien": 2599000,
+    "anh": "assets/giay_demo/af1_07.jpg",
+    "mo_ta": "Huyền thoại đường phố, dễ phối",
+    "ton_kho": 20
+  },
+  {
+    "id": "G003",
+    "ten": "Nike Revolution 6",
+    "hang": "Nike",
+    "gia_tien": 1499000,
+    "anh": "assets/giay_demo/revolution6.jpg",
+    "mo_ta": "Nhẹ, êm cho chạy nhẹ nhàng",
+    "ton_kho": 25
+  },
+  {
+    "id": "G004",
+    "ten": "Adidas Ultraboost 22",
+    "hang": "Adidas",
+    "gia_tien": 3999000,
+    "anh": "assets/giay_demo/ultraboost22.jpg",
+    "mo_ta": "Đệm Boost nảy, êm ái",
+    "ton_kho": 10
+  },
+  {
+    "id": "G005",
+    "ten": "Adidas Stan Smith",
+    "hang": "Adidas",
+    "gia_tien": 2299000,
+    "anh": "assets/giay_demo/stansmith.jpg",
+    "mo_ta": "Tối giản, quốc dân",
+    "ton_kho": 30
+  },
+  {
+    "id": "G006",
+    "ten": "Adidas Duramo SL 2.0",
+    "hang": "Adidas",
+    "gia_tien": 1599000,
+    "anh": "assets/giay_demo/duramo_sl2.jpg",
+    "mo_ta": "Thoáng khí, bền bỉ",
+    "ton_kho": 18
+  },
+  {
+    "id": "G007",
+    "ten": "Puma Suede Classic",
+    "hang": "Puma",
+    "gia_tien": 1999000,
+    "anh": "assets/giay_demo/puma_suede.jpg",
+    "mo_ta": "Chất liệu suede biểu tượng",
+    "ton_kho": 22
+  },
+  {
+    "id": "G008",
+    "ten": "Puma Velocity Nitro 2",
+    "hang": "Puma",
+    "gia_tien": 2899000,
+    "anh": "assets/giay_demo/velocity_nitro2.jpg",
+    "mo_ta": "Chạy bộ, đệm Nitro êm",
+    "ton_kho": 14
+  },
+  {
+    "id": "G009",
+    "ten": "Converse Chuck 70 Hi",
+    "hang": "Converse",
+    "gia_tien": 2199000,
+    "anh": "assets/giay_demo/chuck70_hi.jpg",
+    "mo_ta": "Retro bền bỉ, mũi cao su",
+    "ton_kho": 17
+  },
+  {
+    "id": "G010",
+    "ten": "Converse Run Star Hike",
+    "hang": "Converse",
+    "gia_tien": 2899000,
+    "anh": "assets/giay_demo/runstar_hike.jpg",
+    "mo_ta": "Đế răng cưa cá tính",
+    "ton_kho": 12
+  },
+  {
+    "id": "G011",
+    "ten": "Vans Old Skool",
+    "hang": "Vans",
+    "gia_tien": 1799000,
+    "anh": "assets/giay_demo/oldskool.jpg",
+    "mo_ta": "Sọc Jazz kinh điển",
+    "ton_kho": 28
+  },
+  {
+    "id": "G012",
+    "ten": "Vans Sk8-Hi",
+    "hang": "Vans",
+    "gia_tien": 1999000,
+    "anh": "assets/giay_demo/sk8_hi.jpg",
+    "mo_ta": "Cổ cao bảo vệ cổ chân",
+    "ton_kho": 16
+  },
+  {
+    "id": "G013",
+    "ten": "New Balance 574",
+    "hang": "New Balance",
+    "gia_tien": 2299000,
+    "anh": "assets/giay_demo/nb574.jpg",
+    "mo_ta": "Phong cách retro, bền bỉ",
+    "ton_kho": 24
+  },
+  {
+    "id": "G014",
+    "ten": "New Balance Fresh Foam 1080v13",
+    "hang": "New Balance",
+    "gia_tien": 3999000,
+    "anh": "assets/giay_demo/nb1080v13.jpg",
+    "mo_ta": "Đệm Fresh Foam siêu êm",
+    "ton_kho": 8
+  },
+  {
+    "id": "G015",
+    "ten": "Asics Gel-Nimbus 25",
+    "hang": "Asics",
+    "gia_tien": 4299000,
+    "anh": "assets/giay_demo/gel_nimbus25.jpg",
+    "mo_ta": "Đệm GEL êm ái, ổn định",
+    "ton_kho": 9
+  },
+  {
+    "id": "G016",
+    "ten": "Asics Gel-Kayano 30",
+    "hang": "Asics",
+    "gia_tien": 4599000,
+    "anh": "assets/giay_demo/gel_kayano30.jpg",
+    "mo_ta": "Hỗ trợ ổn định, chạy dài",
+    "ton_kho": 7
+  },
+  {
+    "id": "G017",
+    "ten": "Li-Ning Furious Rider Ace",
+    "hang": "Li-Ning",
+    "gia_tien": 2499000,
+    "anh": "assets/giay_demo/furious_rider.jpg",
+    "mo_ta": "Đế dày êm, cá tính",
+    "ton_kho": 13
+  },
+  {
+    "id": "G018",
+    "ten": "Li-Ning Arc Ace",
+    "hang": "Li-Ning",
+    "gia_tien": 2199000,
+    "anh": "assets/giay_demo/arc_ace.jpg",
+    "mo_ta": "Phong cách trẻ trung",
+    "ton_kho": 11
+  },
+  {
+    "id": "G019",
+    "ten": "Anta KT7",
+    "hang": "Anta",
+    "gia_tien": 2999000,
+    "anh": "assets/giay_demo/anta_kt7.jpg",
+    "mo_ta": "Bóng rổ, trợ lực tốt",
+    "ton_kho": 10
+  },
+  {
+    "id": "G020",
+    "ten": "Anta Shock The Game",
+    "hang": "Anta",
+    "gia_tien": 2299000,
+    "anh": "assets/giay_demo/anta_stg.jpg",
+    "mo_ta": "Bóng rổ, bám sân",
+    "ton_kho": 15
+  },
+  {
+    "id": "G021",
+    "ten": "Nike ZoomX Invincible 3",
+    "hang": "Nike",
+    "gia_tien": 4699000,
+    "anh": "assets/giay_demo/invincible3.jpg",
+    "mo_ta": "Siêu êm cho daily run",
+    "ton_kho": 6
+  },
+  {
+    "id": "G022",
+    "ten": "Adidas Adizero Adios 7",
+    "hang": "Adidas",
+    "gia_tien": 3299000,
+    "anh": "assets/giay_demo/adios7.jpg",
+    "mo_ta": "Chạy tốc độ, nhẹ",
+    "ton_kho": 12
+  },
+  {
+    "id": "G023",
+    "ten": "Puma Deviate Nitro Elite",
+    "hang": "Puma",
+    "gia_tien": 4999000,
+    "anh": "assets/giay_demo/deviate_elite.jpg",
+    "mo_ta": "Race day, tấm plate",
+    "ton_kho": 5
+  },
+  {
+    "id": "G024",
+    "ten": "Converse One Star",
+    "hang": "Converse",
+    "gia_tien": 1899000,
+    "anh": "assets/giay_demo/one_star.jpg",
+    "mo_ta": "Đơn giản, tinh tế",
+    "ton_kho": 18
+  },
+  {
+    "id": "G025",
+    "ten": "Vans Authentic",
+    "hang": "Vans",
+    "gia_tien": 1599000,
+    "anh": "assets/giay_demo/authentic.jpg",
+    "mo_ta": "Thấp cổ, tối giản",
+    "ton_kho": 21
+  },
+  {
+    "id": "G026",
+    "ten": "New Balance 327",
+    "hang": "New Balance",
+    "gia_tien": 2799000,
+    "anh": "assets/giay_demo/nb327.jpg",
+    "mo_ta": "Thiết kế nghiêng số 327",
+    "ton_kho": 14
+  },
+  {
+    "id": "G027",
+    "ten": "Asics Novablast 4",
+    "hang": "Asics",
+    "gia_tien": 3699000,
+    "anh": "assets/giay_demo/novablast4.jpg",
+    "mo_ta": "Đệm bật, chạy linh hoạt",
+    "ton_kho": 10
+  },
+  {
+    "id": "G028",
+    "ten": "Li-Ning Shadow",
+    "hang": "Li-Ning",
+    "gia_tien": 2099000,
+    "anh": "assets/giay_demo/shadow.jpg",
+    "mo_ta": "Nhẹ, thoáng, luyện tập",
+    "ton_kho": 16
+  }
+]

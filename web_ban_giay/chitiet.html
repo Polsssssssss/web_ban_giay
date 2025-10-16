@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chi tiết giày - Toko</title>
+    <link rel="stylesheet" href="css/kieu_dang.css">
+</head>
+<body>
+    <!-- 🔹 HEADER -->
+    <header class="tieu_de">
+        <div class="tieu_de_noi_dung">
+            <a class="logo_chu" href="index.html" title="Về trang chủ">
+                <img src="assets/logo/toko.svg" alt="Toko">
+                <div class="ten_web">Toko</div>
+            </a>
+            <div class="khung_tim">
+                <input id="o_tim_kiem" class="o_tim" placeholder="Tìm giày, hãng…">
+                <button id="nut_tim_kiem" class="nut_tim">Tìm</button>
+            </div>
+            <div class="khu_tai_khoan">
+                <div id="hien_thi_tai_khoan"></div>
+                <a class="nut_dang_nhap" id="nut_dang_nhap" href="dangnhap.html">Đăng nhập</a>
+                <button class="nut_dang_xuat" id="nut_dang_xuat" style="display:none">Đăng xuất</button>
+                <a class="icon_gio_hang" href="giohang.html" title="Giỏ hàng">
+                    🛒 <span class="so_luong" id="so_gio_hang">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 🔹 NỘI DUNG CHI TIẾT -->
+    <main class="khung_trang">
+        <section class="khu_san_pham" style="grid-column:1 / -1">
+            <div id="noi_dung_chi_tiet">Đang tải...</div>
+        </section>
+    </main>
+
+    <!-- 🔹 SCRIPT -->
+    <script src="js/du_lieu.js"></script>
+    <script src="js/xac_thuc.js"></script>
+    <script src="js/gio_hang.js"></script>
+    <script>
+        // Khởi tạo và hiển thị trạng thái đăng nhập
+        khoi_tao_du_lieu_co_ban();
+        tai_hien_trang_thai_dang_nhap_header();
+
+        // 🔸 Chặn truy cập giỏ hàng nếu chưa đăng nhập
+        document.addEventListener('DOMContentLoaded', () => {
+            const nut_gio = document.querySelector('.icon_gio_hang');
+            if (nut_gio) {
+                nut_gio.addEventListener('click', (e) => {
+                    const tk = JSON.parse(localStorage.getItem('tai_khoan_dang_nhap') || 'null');
+                    if (!tk) {
+                        e.preventDefault();
+                        alert('Vui lòng đăng nhập để xem giỏ hàng!');
+                        window.location.href = 'dangnhap.html';
+                    }
+                });
+            }
+        });
+
+        // 🔹 Hiển thị chi tiết sản phẩm
+        (async () => {
+            const params = new URLSearchParams(location.search);
+            const id = params.get('id') || localStorage.getItem('giay_dang_xem');
+            const ds = JSON.parse(localStorage.getItem('du_lieu_giay') || '[]');
+            const sp = ds.find(x => x.id === id);
+            const div = document.getElementById('noi_dung_chi_tiet');
+
+            if (!sp) {
+                div.textContent = 'Không tìm thấy sản phẩm.';
+                return;
+            }
+
+            div.innerHTML = `
+            <div style="display:grid; grid-template-columns:320px 1fr; gap:24px; align-items:start;">
+              <img src="${sp.anh}" alt="${sp.ten}" style="width:100%; border:1px solid #222; border-radius:12px;">
+              <div>
+                <h2 style="margin-bottom:8px">${sp.ten}</h2>
+                <div style="margin:6px 0">Hãng: <strong>${sp.hang}</strong></div>
+                <div class="gia_tien" style="font-size:20px; margin:8px 0;">
+                  ${Number(sp.gia_tien).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}
+                </div>
+                <p style="margin-top:10px; color:#bbb;">${sp.mo_ta || ''}</p>
+
+                <div style="margin-top:16px;">
+                  <label style="font-weight:600;">Chọn size:</label>
+                  <div id="chon_size" style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;"></div>
+                </div>
+
+                <button id="nut_them_gio" class="nut_chinh" style="margin-top:16px;">🛒 Thêm vào giỏ hàng</button>
+              </div>
+            </div>
+          `;
+
+            // 🔹 Sinh nút chọn size
+            const div_size = document.getElementById('chon_size');
+            let size_da_chon = null;
+            for (let size = 38; size <= 44; size++) {
+                const nut = document.createElement('button');
+                nut.textContent = size;
+                nut.className = 'nut_size';
+                nut.style = `
+              padding:8px 12px;
+              border:1px solid #555;
+              border-radius:6px;
+              background:#222;
+              color:#fff;
+              cursor:pointer;
+            `;
+                nut.onclick = () => {
+                    document.querySelectorAll('.nut_size').forEach(n => n.style.background = '#222');
+                    nut.style.background = '#E30613';
+                    size_da_chon = size;
+                };
+                div_size.appendChild(nut);
+            }
+
+            // 🔹 Thêm vào giỏ hàng (phải chọn size và đăng nhập)
+            document.getElementById('nut_them_gio').onclick = () => {
+                const tk = JSON.parse(localStorage.getItem('tai_khoan_dang_nhap') || 'null');
+                if (!tk) {
+                    alert('Vui lòng đăng nhập để thêm sản phẩm vào giỏ!');
+                    window.location.href = 'dangnhap.html';
+                    return;
+                }
+                if (!size_da_chon) {
+                    alert('Vui lòng chọn size trước khi thêm vào giỏ!');
+                    return;
+                }
+                them_vao_gio(sp.id, size_da_chon);
+            };
+        })();
+    </script>
+</body>
+</html>

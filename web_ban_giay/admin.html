@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quản trị - Toko</title>
+  <link rel="stylesheet" href="css/kieu_dang.css">
+</head>
+<body>
+  <header class="tieu_de">
+    <div class="tieu_de_noi_dung">
+      <a class="logo_chu" href="index.html" title="Về trang chủ">
+        <img src="assets/logo/toko.svg" alt="Toko">
+        <div class="ten_web">Toko</div>
+      </a>
+      <div class="khung_tim">
+        <input id="o_tim_kiem" class="o_tim" placeholder="Tìm giày, hãng…">
+        <button id="nut_tim_kiem" class="nut_tim">Tìm</button>
+      </div>
+      <div class="khu_tai_khoan">
+        <div id="hien_thi_tai_khoan"></div>
+        <a class="nut_dang_nhap" id="nut_dang_nhap" href="dangnhap.html">Đăng nhập</a>
+        <button class="nut_dang_xuat" id="nut_dang_xuat" style="display:none">Đăng xuất</button>
+        <a class="icon_gio_hang" href="giohang.html" title="Giỏ hàng">
+          🛒 <span class="so_luong" id="so_gio_hang">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="khung_trang">
+    <section class="khu_san_pham" style="grid-column:1 / -1">
+      <h2>Bảng điều khiển Admin</h2>
+      <div class="nho">Chỉ quản trị mới vào được. Hãy đăng nhập admin.</div>
+
+      <h3 style="margin-top:16px">Thêm giày</h3>
+      <div class="nhom_form" style="max-width:720px">
+        <input id="them_ten" class="o_nhap" placeholder="Tên giày">
+        <input id="them_hang" class="o_nhap" placeholder="Hãng (Nike/Adidas/...)">
+        <input id="them_gia" class="o_nhap" type="number" placeholder="Giá tiền (VND)">
+        <input id="them_ton" class="o_nhap" type="number" placeholder="Tồn kho">
+        <input id="them_anh" class="o_nhap" placeholder="Tên file ảnh trong assets/giay_demo (vd: pegasus40.jpg)">
+        <textarea id="them_mo_ta" class="o_nhap" placeholder="Mô tả ngắn" rows="3"></textarea>
+        <button class="nut_chinh" id="nut_them_giay">Thêm</button>
+      </div>
+
+      <h3 style="margin:16px 0 8px">Danh sách giày</h3>
+      <div style="overflow:auto">
+        <table class="bang_gio">
+          <thead><tr>
+            <th>ID</th><th>Ảnh</th><th>Tên</th><th>Hãng</th><th>Giá</th><th>Tồn</th><th>Hành động</th>
+          </tr></thead>
+          <tbody id="bang_admin"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/du_lieu.js"></script>
+  <script src="js/xac_thuc.js"></script>
+  <script src="js/quan_tri.js"></script>
+  <script>
+    khoi_tao_du_lieu_co_ban();
+    bao_ve_trang_admin();
+    tai_hien_trang_thai_dang_nhap_header();
+    tai_bang_quan_tri();
+  </script>
+</body>
+</html>

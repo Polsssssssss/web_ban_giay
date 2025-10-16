@@ -1,0 +1,110 @@
+
+:root{
+  --mau-chu-dao:#E30613;
+  --mau-nen-toi:#111;
+  --mau-nen:#1a1a1a;
+  --mau-chu:#fff;
+  --mau-phu:#2a2a2a;
+  --mau-vien:#e74c3c;
+}
+
+/* Reset nhe */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--mau-nen);color:var(--mau-chu);font-family:Segoe UI, Arial, sans-serif}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer}
+
+.tieu_de{
+  position:sticky; top:0; z-index:50;
+  background:var(--mau-nen-toi); border-bottom:1px solid #222;
+}
+.tieu_de_noi_dung{
+  max-width:1280px; margin:auto; display:grid; grid-template-columns:220px 1fr 260px; gap:12px; align-items:center; padding:10px 16px;
+}
+.logo_chu{display:flex; align-items:center; gap:8px}
+.logo_chu img{height:40px}
+.logo_chu .ten_web{font-size:28px; font-weight:800; color:var(--mau-chu); letter-spacing:0.5px}
+
+.khung_tim{
+  display:flex; gap:8px;
+}
+.o_tim{flex:1; padding:10px 12px; border-radius:8px; border:1px solid #333; background:#0d0d0d; color:#fff}
+.nut_tim{padding:10px 16px; border-radius:8px; border:1px solid var(--mau-chu-dao); background:transparent; color:#fff}
+.nut_tim:hover{background:var(--mau-chu-dao)}
+
+.khu_tai_khoan{
+  display:flex; gap:12px; justify-content:flex-end; align-items:center;
+}
+.nut_dang_nhap, .nut_dang_xuat{
+  padding:10px 14px; border-radius:999px; background:var(--mau-chu-dao); color:#fff; border:none;
+}
+.icon_gio_hang{position:relative; padding:10px 14px; border-radius:999px; background:#222}
+.icon_gio_hang .so_luong{
+  position:absolute; top:-6px; right:-6px; background:var(--mau-chu-dao); border-radius:999px; padding:2px 6px; font-size:12px;
+}
+
+/* Than trang */
+.khung_trang{
+  max-width:1280px; margin:16px auto; display:grid; grid-template-columns:260px 1fr; gap:16px;
+}
+
+/* Sidebar */
+.muc_trai{
+  background:#121212; border:1px solid #222; border-radius:12px; padding:16px;
+}
+.muc_trai h3{margin-bottom:12px; color:#ddd}
+.ds_hang{display:flex; flex-direction:column; gap:8px; margin-bottom:12px}
+.ds_hang label{display:flex; gap:10px; align-items:center}
+.nut_xoa_loc{padding:8px 12px; border:1px solid var(--mau-vien); border-radius:8px; background:transparent; color:#fff}
+.nut_xoa_loc:hover{background:var(--mau-chu-dao)}
+
+/* San pham */
+.khu_san_pham{
+  background:#121212; border:1px solid #222; border-radius:12px; padding:16px;
+}
+.luoi_giay{
+  display:grid; grid-template-columns:repeat(5, 1fr); gap:14px;
+}
+.the_giay{
+  background:#141414; border:1px solid #1f1f1f; border-radius:14px; overflow:hidden; transition:all .2s; display:flex; flex-direction:column;
+}
+.the_giay:hover{border-color:var(--mau-vien); transform:translateY(-2px)}
+.the_giay img{width:100%; height:180px; object-fit:cover; background:#0d0d0d}
+.thong_tin_giay{padding:12px; display:flex; flex-direction:column; gap:6px}
+.ten_giay{font-weight:700; line-height:1.2}
+.hang_giay{font-size:13px; color:#bbb}
+.gia_tien{color:#fff; font-weight:800}
+.nut_them_gio{margin-top:8px; padding:10px; border-radius:10px; border:1px solid var(--mau-chu-dao); background:transparent; color:#fff}
+.nut_them_gio:hover{background:var(--mau-chu-dao)}
+
+/* Phan trang */
+.phan_trang{margin-top:16px; display:flex; gap:8px; flex-wrap:wrap; align-items:center; justify-content:center}
+.phan_trang button{padding:8px 12px; border-radius:8px; background:#222; color:#fff; border:1px solid #333}
+.phan_trang button.dang_chon{background:var(--mau-chu-dao); border-color:var(--mau-chu-dao)}
+
+/* Responsive */
+@media (max-width: 1199px){
+  .luoi_giay{grid-template-columns:repeat(4, 1fr)}
+}
+@media (max-width: 900px){
+  .tieu_de_noi_dung{grid-template-columns:1fr}
+  .khung_trang{grid-template-columns:1fr}
+}
+@media (max-width: 640px){
+  .luoi_giay{grid-template-columns:repeat(2, 1fr)}
+}
+
+/* Trang dang nhap/dang ky */
+.khung_form{max-width:420px; margin:40px auto; background:#121212; padding:20px; border:1px solid #222; border-radius:12px}
+.khung_form h2{margin-bottom:12px}
+.nhom_form{display:flex; flex-direction:column; gap:6px; margin-top:12px}
+.o_nhap{padding:10px 12px; border-radius:8px; border:1px solid #333; background:#0d0d0d; color:#fff}
+.nut_chinh{margin-top:12px; padding:10px; border-radius:10px; background:var(--mau-chu-dao); color:#fff; border:none}
+.nho{font-size:13px; color:#bbb; margin-top:8px}
+
+/* Gio hang */
+.bang_gio{width:100%; border-collapse:collapse}
+.bang_gio th, .bang_gio td{border-bottom:1px solid #222; padding:12px; text-align:left}
+.bang_gio img{width:64px; height:64px; object-fit:cover; border-radius:8px; border:1px solid #222}
+.hanh_dong_gio button{padding:6px 10px; border-radius:8px; background:#222; color:#fff; border:1px solid #333}
+.tong_tien{margin-top:16px; display:flex; justify-content:flex-end; gap:10px; align-items:center}

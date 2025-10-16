@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trang chủ - Toko</title>
+  <link rel="stylesheet" href="css/kieu_dang.css">
+</head>
+<body>
+    <header class="tieu_de">
+        <div class="tieu_de_noi_dung">
+            <a class="logo_chu" href="index.html" title="Về trang chủ">
+                <img src="assets/logo/toko.svg" alt="Toko">
+                <div class="ten_web">Toko</div>
+            </a>
+            <div class="khung_tim">
+                <input id="o_tim_kiem" class="o_tim" placeholder="Tìm giày, hãng…">
+                <button id="nut_tim_kiem" class="nut_tim">Tìm</button>
+            </div>
+            <div class="khu_tai_khoan">
+                <div id="hien_thi_tai_khoan"></div>
+                <a class="nut_dang_nhap" id="nut_dang_nhap" href="dangnhap.html">Đăng nhập</a>
+                <button class="nut_dang_xuat" id="nut_dang_xuat" style="display:none">Đăng xuất</button>
+                <a class="icon_gio_hang" href="giohang.html" title="Giỏ hàng">
+                    🛒 <span class="so_luong" id="so_gio_hang">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="khung_trang">
+        <aside class="muc_trai">
+            <h3>Hãng giày</h3>
+            <div class="ds_hang" id="bo_loc_hang">
+                <!-- Checkbox hang se duoc nap dong -->
+            </div>
+            <button class="nut_xoa_loc" id="nut_xoa_loc">Xóa lọc</button>
+        </aside>
+
+        <section class="khu_san_pham">
+            <div class="luoi_giay" id="luoi_giay"></div>
+            <div class="phan_trang" id="phan_trang"></div>
+        </section>
+    </main>
+
+    <script src="js/du_lieu.js"></script>
+    <script src="js/xac_thuc.js"></script>
+    <script src="js/gio_hang.js"></script>
+    <script src="js/ung_dung.js"></script>
+    <script>
+        khoi_tao_du_lieu_co_ban();
+        tai_hien_trang_thai_dang_nhap_header();
+
+        // 🟢 Ngăn mở giỏ hàng khi chưa đăng nhập
+        document.addEventListener('DOMContentLoaded', () => {
+            const nut_gio = document.querySelector('.icon_gio_hang');
+            if (nut_gio) {
+                nut_gio.addEventListener('click', (e) => {
+                    const tai_khoan = JSON.parse(localStorage.getItem('tai_khoan_dang_nhap') || 'null');
+                    if (!tai_khoan) {
+                        e.preventDefault();
+                        alert('Vui lòng đăng nhập để xem giỏ hàng!');
+                        window.location.href = 'dangnhap.html';
+                    }
+                });
+            }
+        });
+
+        khoi_dong_trang_chu();
+    </script>
+</body>
+</html>

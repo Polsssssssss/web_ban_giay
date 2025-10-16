@@ -1,0 +1,14 @@
+{
+  "admin": [
+    {
+      "email": "admin",
+      "mat_khau": "123",
+      "ten": "Quan tri vien 1"
+    },
+    {
+      "email": "admin2",
+      "mat_khau": "123",
+      "ten": "Quan tri vien 2"
+    }
+  ]
+}
