@@ -96,7 +96,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="admin.html" />
     <Content Include="assets\giay_demo\adios7.jpg" />
     <Content Include="assets\giay_demo\af1_07.jpg" />
     <Content Include="assets\giay_demo\anta_kt7.jpg" />
@@ -127,18 +126,13 @@
     <Content Include="assets\giay_demo\velocity_nitro2.jpg" />
     <Content Include="assets\logo\toko.svg" />
     <Content Include="Chitiet.aspx" />
-    <Content Include="chitiet.html" />
     <Content Include="css\kieu_dang.css" />
     <Content Include="DangKy.aspx" />
-    <Content Include="dangky.html" />
     <Content Include="dangnhap.aspx" />
-    <Content Include="dangnhap.html" />
     <Content Include="GioHang.aspx" />
-    <Content Include="giohang.html" />
     <Content Include="Global.asax" />
     <Content Include="HoSo.aspx" />
     <Content Include="Index.aspx" />
-    <Content Include="Index_frontend.html" />
     <Content Include="js\du_lieu.js" />
     <Content Include="js\gio_hang.js" />
     <Content Include="js\quan_tri.js" />
