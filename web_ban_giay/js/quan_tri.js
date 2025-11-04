@@ -1,5 +1,4 @@
 
-// quan_tri.js - CRUD giay cho admin (luu vao localStorage)
 
 function tai_bang_quan_tri(){
   const bang = document.getElementById('bang_admin');
@@ -27,7 +26,7 @@ function tai_bang_quan_tri(){
       }
     };
     tr.querySelector('.btn_sua').onclick = ()=>{
-      // Sua bang prompt don gian de tranh code modal dai
+     
       const ten = prompt('Tên giày:', sp.ten); if(ten===null) return;
       const hang = prompt('Hãng:', sp.hang); if(hang===null) return;
       const gia = parseInt(prompt('Giá tiền:', sp.gia_tien)); if(isNaN(gia)) return;
@@ -47,7 +46,7 @@ function tai_bang_quan_tri(){
 }
 
 function tao_id_moi(ds){
-  // Gxxx, tim so lon nhat + 1
+ 
   let max = 0;
   for(const x of ds){
     const m = /G(\d+)/.exec(x.id);
@@ -72,7 +71,7 @@ document.getElementById('nut_them_giay')?.addEventListener('click', ()=>{
   ds.push(sp);
   localStorage.setItem('du_lieu_giay', JSON.stringify(ds));
 
-  // reset form
+  
   ['them_ten','them_hang','them_gia','them_ton','them_anh','them_mo_ta'].forEach(id=>document.getElementById(id).value='');
 
   tai_bang_quan_tri();

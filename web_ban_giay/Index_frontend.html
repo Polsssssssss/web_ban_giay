@@ -19,7 +19,7 @@
             </div>
             <div class="khu_tai_khoan">
                 <div id="hien_thi_tai_khoan"></div>
-                <a class="nut_dang_nhap" id="nut_dang_nhap" href="dangnhap.html">Đăng nhập</a>
+                <a class="nut_dang_nhap" id="nut_dang_nhap" href="dangnhap.aspx">Đăng nhập</a>
                 <button class="nut_dang_xuat" id="nut_dang_xuat" style="display:none">Đăng xuất</button>
                 <a class="icon_gio_hang" href="giohang.html" title="Giỏ hàng">
                     🛒 <span class="so_luong" id="so_gio_hang">0</span>
@@ -28,7 +28,8 @@
         </div>
     </header>
 
-    <main class="khung_trang">
+    <main 
+          class="khung_trang">
         <aside class="muc_trai">
             <h3>Hãng giày</h3>
             <div class="ds_hang" id="bo_loc_hang">
@@ -60,7 +61,7 @@
                     if (!tai_khoan) {
                         e.preventDefault();
                         alert('Vui lòng đăng nhập để xem giỏ hàng!');
-                        window.location.href = 'dangnhap.html';
+                        window.location.href = 'dangnhap.aspx';
                     }
                 });
             }

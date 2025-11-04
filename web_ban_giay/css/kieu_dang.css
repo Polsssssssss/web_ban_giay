@@ -1,4 +1,4 @@
-
+﻿
 :root{
   --mau-chu-dao:#E30613;
   --mau-nen-toi:#111;
@@ -108,3 +108,117 @@ button{cursor:pointer}
 .bang_gio img{width:64px; height:64px; object-fit:cover; border-radius:8px; border:1px solid #222}
 .hanh_dong_gio button{padding:6px 10px; border-radius:8px; background:#222; color:#fff; border:1px solid #333}
 .tong_tien{margin-top:16px; display:flex; justify-content:flex-end; gap:10px; align-items:center}
+
+#bo_loc_hang {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px 14px !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    background: #111 !important;
+    padding: 10px 14px !important;
+    border-radius: 10px !important;
+    border: 1px solid #333 !important;
+}
+
+    #bo_loc_hang label {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        cursor: pointer !important;
+        color: #eee !important;
+        font-size: 15px !important;
+        background: #222 !important;
+        padding: 4px 8px !important;
+        border-radius: 6px !important;
+        border: 1px solid #444 !important;
+        white-space: nowrap !important;
+        transition: 0.2s ease;
+    }
+
+        #bo_loc_hang label:hover {
+            background: #333 !important;
+        }
+
+    #bo_loc_hang input[type="checkbox"] {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    #bo_loc_hang label.checked {
+        background: #E30613 !important;
+        color: #fff !important;
+        border-color: #E30613 !important;
+    }
+.hang-checkbox-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    align-items: center;
+    background: #111;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+    .hang-checkbox-list input[type="checkbox"] {
+        margin-right: 6px;
+        transform: scale(1.1);
+    }
+
+    .hang-checkbox-list label {
+        color: #eee;
+        cursor: pointer;
+        margin-right: 10px;
+        white-space: nowrap;
+    }
+
+        .hang-checkbox-list label:hover {
+            color: #E30613;
+        }
+.hang-checkbox-list {1 
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 4px 10px !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    background: #111;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    line-height: 1.4;
+}
+
+    
+    .hang-checkbox-list span {
+        display: inline-flex !important;
+        align-items: center;
+        gap: 6px;
+        margin: 0 !important;
+        padding: 2px 6px;
+        background: #222;
+        border-radius: 6px;
+        border: 1px solid #444;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+        .hang-checkbox-list span:hover {
+            background: #333;
+        }
+
+    .hang-checkbox-list input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+        margin: 0 !important;
+    }
+
+    .hang-checkbox-list label {
+        color: #eee !important;
+        margin: 0 !important;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+

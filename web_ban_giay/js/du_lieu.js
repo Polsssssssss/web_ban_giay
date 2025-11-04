@@ -1,5 +1,5 @@
 
-// du_lieu.js - khoi tao & nap du lieu vao localStorage
+
 
 async function khoi_tao_du_lieu_co_ban(){
   // Nap danh sach admin mau tu json vao localStorage (chi khi chua co)

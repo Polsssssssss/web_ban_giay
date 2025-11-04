@@ -10,7 +10,7 @@
     <!-- 🔹 HEADER -->
     <header class="tieu_de">
         <div class="tieu_de_noi_dung">
-            <a class="logo_chu" href="index.html" title="Về trang chủ">
+            <a class="logo_chu" href="Index.aspx" title="Về trang chủ">
                 <img src="assets/logo/toko.svg" alt="Toko">
                 <div class="ten_web">Toko</div>
             </a>
@@ -20,7 +20,7 @@
             </div>
             <div class="khu_tai_khoan">
                 <div id="hien_thi_tai_khoan"></div>
-                <a class="nut_dang_nhap" id="nut_dang_nhap" href="dangnhap.html">Đăng nhập</a>
+                <a class="nut_dang_nhap" id="nut_dang_nhap" href="dangnhap.aspx">Đăng nhập</a>
                 <button class="nut_dang_xuat" id="nut_dang_xuat" style="display:none">Đăng xuất</button>
                 <a class="icon_gio_hang" href="giohang.html" title="Giỏ hàng">
                     🛒 <span class="so_luong" id="so_gio_hang">0</span>
@@ -54,7 +54,7 @@
                     if (!tk) {
                         e.preventDefault();
                         alert('Vui lòng đăng nhập để xem giỏ hàng!');
-                        window.location.href = 'dangnhap.html';
+                        window.location.href = 'dangnhap.aspx';
                     }
                 });
             }
@@ -122,7 +122,7 @@
                 const tk = JSON.parse(localStorage.getItem('tai_khoan_dang_nhap') || 'null');
                 if (!tk) {
                     alert('Vui lòng đăng nhập để thêm sản phẩm vào giỏ!');
-                    window.location.href = 'dangnhap.html';
+                    window.location.href = 'dangnhap.aspx';
                     return;
                 }
                 if (!size_da_chon) {

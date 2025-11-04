@@ -1,24 +1,24 @@
-// gio_hang.js - quản lý giỏ hàng theo tài khoản đăng nhập (khách)
 
-// 🟢 Lấy email tài khoản hiện tại
+
+
 function lay_email_hien_tai() {
     const v = JSON.parse(localStorage.getItem('tai_khoan_dang_nhap') || 'null');
     return v ? v.email : null;
 }
 
-// 🟢 Tạo key lưu giỏ hàng riêng cho từng tài khoản
+
 function key_gio(email) {
     return 'gio_hang_' + email;
 }
 
-// 🟢 Đọc giỏ hàng hiện tại
+
 function doc_gio_hang() {
     const email = lay_email_hien_tai();
     if (!email) return [];
     return JSON.parse(localStorage.getItem(key_gio(email)) || '[]');
 }
 
-// 🟢 Ghi giỏ hàng vào localStorage
+
 function ghi_gio_hang(ds) {
     const email = lay_email_hien_tai();
     if (!email) return;
@@ -26,7 +26,7 @@ function ghi_gio_hang(ds) {
     cap_nhat_hien_thi_gio_hang();
 }
 
-// 🟢 Thêm sản phẩm vào giỏ (gồm cả size)
+
 function them_vao_gio(id_sp, size = null) {
     const email = lay_email_hien_tai();
     if (!email) {
@@ -46,7 +46,7 @@ function them_vao_gio(id_sp, size = null) {
     alert(`✅ Đã thêm ${sp.ten}${size ? ' (size ' + size + ')' : ''} vào giỏ!`);
 }
 
-// 🟢 Cập nhật số lượng hiển thị trên biểu tượng giỏ hàng
+
 function cap_nhat_hien_thi_gio_hang() {
     const badge = document.getElementById('so_gio_hang');
     if (!badge) return;
@@ -55,7 +55,6 @@ function cap_nhat_hien_thi_gio_hang() {
     badge.textContent = String(tong);
 }
 
-// 🟢 Trang giohang.html
 function nap_gio_hang_trang() {
     const email = lay_email_hien_tai();
     if (!email) {
